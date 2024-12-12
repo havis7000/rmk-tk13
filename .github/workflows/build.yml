@@ -7,8 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: cargo-bins/cargo-binstall@main
+      - uses: actions/checkout@v3
       - name: Install rmk-cli and cargo-make
+        uses: cargo-bins/cargo-binstall@main
         run: cargo binstall cargo-make rmk-cli -y
       - name: Create firmware project
         working-directory: .
