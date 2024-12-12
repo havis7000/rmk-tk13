@@ -7,14 +7,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: Install rmk-cli and cargo-make
         uses: cargo-bins/cargo-binstall@main
         run: cargo binstall cargo-make rmk-cli -y
       - name: Create firmware project
+        uses: actions/checkout@v3
         working-directory: .
         run: rmk-cli create --keyboard-toml-path keyboard.toml --vial-json-path vial.json --target-dir rmk
       - name: Build firmware
+        uses: actions/checkout@v3
         working-directory: ./rmk
         run: cargo make uf2 --release
       - name: Upload artifacts
