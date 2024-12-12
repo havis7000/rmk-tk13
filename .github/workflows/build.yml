@@ -1,0 +1,50 @@
+name: Build RMK firmware
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "./**"
+
+on:
+  workflow_call:
+    inputs:
+      fallback_binary:
+        description: "Fallback binary format, if no *.uf2 file was built"
+        default: "bin"
+        required: false
+        type: string
+      archive_name:
+        description: "Archive output file name"
+        default: "firmware"
+        required: false
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install cargo-make
+        run: cargo install --force cargo-make rmk-cli
+      - name: Create firmware project
+        working-directory: .
+        run: rmk-cli create --keyboard-toml-path keyboard.toml --vial-json-path vial.json --target-dir rmk
+      - name: Build firmware
+        working-directory: ./rmk
+        run: cargo make uf2 --release
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          path: rmk/*.uf2
+      
+  # merge:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   name: Merge Output Artifacts
+  #   steps:
+  #     - name: Merge Artifacts
+  #       uses: actions/upload-artifact/merge@v4
+  #       with:
+  #         name: ${{ inputs.archive_name }}
+  #         pattern: artifact-*
+  #         delete-merged: true
