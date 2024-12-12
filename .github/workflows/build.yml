@@ -4,18 +4,6 @@ on:
   push:
     paths:
       - "./**"
-  workflow_call:
-    inputs:
-      fallback_binary:
-        description: "Fallback binary format, if no *.uf2 file was built"
-        default: "bin"
-        required: false
-        type: string
-      archive_name:
-        description: "Archive output file name"
-        default: "firmware"
-        required: false
-        type: string
 
 jobs:
   build:
