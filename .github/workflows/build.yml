@@ -4,8 +4,6 @@ on:
   push:
     paths:
       - "./**"
-
-on:
   workflow_call:
     inputs:
       fallback_binary:
