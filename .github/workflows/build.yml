@@ -9,15 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install rmk-cli and cargo-make
-        # run: cargo install --force cargo-make rmk-cli
-        run: cargo install --force rmk-cli
+        run: cargo install --force cargo-make rmk-cli
       - name: Create firmware project
         working-directory: .
         run: rmk-cli create --keyboard-toml-path keyboard.toml --vial-json-path vial.json --target-dir rmk
       - name: Build firmware
         working-directory: ./rmk
-        # run: cargo make uf2 --release
-        run: cargo build --release
+        run: cargo make uf2 --release
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
