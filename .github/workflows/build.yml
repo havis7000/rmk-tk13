@@ -11,6 +11,8 @@ jobs:
       - name: Install rmkit and cargo-make
         run: cargo binstall cargo-make rmkit -y
       - uses: actions/checkout@v3
+      - name: Install libssl
+        run: apt-get install pkg-config libssl-dev
       - name: Create firmware project
         working-directory: .
         run: rmkit create --keyboard-toml-path keyboard.toml --vial-json-path vial.json --target-dir rmk
