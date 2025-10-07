@@ -11,7 +11,7 @@ chip = "nrf52840"  # Direct chip specification
 [matrix]
 # Input and output pins are mandatory
 input_pins = ["P0_02", "P0_22", "P1_04", "P0_11"]
-output_pins = ["P0_20", "P1_00", "P1_01", "P1_06"]
+output_pins = ["P0_20", "P1_00", "P0_24", "P1_06"]
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
 #row2col = true
 
