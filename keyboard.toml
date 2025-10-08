@@ -69,17 +69,10 @@ resolution = 2
 # Whether the direction of the rotary encoder is reversed.
 reverse = false
 
-# Ble configuration
-# To use the default configuration, ignore this section completely
+
 [ble]
-# Whether to enable BLE feature
 enabled = true
-# nRF52840's saadc pin for reading battery level, you can use a pin number or "vddh"
-battery_adc_pin = "vddh"
-# Or
-# battery_adc_pin = "P0_04"
-# The voltage divider setting for saadc, this setting should be ignored when using "vddh" as the adc pin.
-# For example, nice!nano have 806 + 2M resistors, the saadc measures voltage on 2M resistor, so the two values should be set to 2000 and 2806
+
 
 
 
