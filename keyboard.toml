@@ -41,8 +41,8 @@ _     _ C   SPACE
 [[layer]]
 name = "fn_layer" #optional name for the layer
 keys = """
-_ User0 User1 _  
-_ _     _     Bootloader  
+_ BT0 BT1     _  
+_ _   CLR_BT  Bootloader  
 Z X     D     G 
 _ _     C     _
 """
