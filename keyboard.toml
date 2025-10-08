@@ -4,7 +4,7 @@ name = "TK13"
 product_name = "TK13"
 vendor_id = 0x4c4b
 product_id = 0x4643
-manufacturer = "havis"
+manufacturer = "haobo"
 chip = "nrf52840"  # Direct chip specification
 
 
@@ -74,6 +74,13 @@ reverse = false
 [ble]
 # Whether to enable BLE feature
 enabled = true
+# nRF52840's saadc pin for reading battery level, you can use a pin number or "vddh"
+battery_adc_pin = "vddh"
+# Or
+# battery_adc_pin = "P0_04"
+# The voltage divider setting for saadc, this setting should be ignored when using "vddh" as the adc pin.
+# For example, nice!nano have 806 + 2M resistors, the saadc measures voltage on 2M resistor, so the two values should be set to 2000 and 2806
+
 
 
 [light]
