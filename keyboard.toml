@@ -1,10 +1,10 @@
 # Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
 [keyboard]
-name = "TK13"
-product_name = "TK13"
+name = "TK013"
+product_name = "TK013"
 vendor_id = 0x4c4b
 product_id = 0x4643
-manufacturer = "haobo"
+manufacturer = "havis"
 chip = "nrf52840"  # Direct chip specification
 
 
@@ -52,7 +52,7 @@ pin_a = "P0_29"
 pin_b = "P0_31"
 
 # Whether to use the MCU's internal pull-up resistor, default to false
-internal_pullup = false
+internal_pullup = true
 
 # Phase is the working mode of the rotary encoders.
 # Available mode:
@@ -70,11 +70,13 @@ resolution = 2
 reverse = false
 
 
+# Ble configuration
+# To use the default configuration, ignore this section completely
 [ble]
+# Whether to enable BLE feature
 enabled = true
-
-
-
+# nRF52840's saadc pin for reading battery level, you can use a pin number or "vddh"
+battery_adc_pin = "vddh"
 
 [light]
 # All light pins are high-active by default, uncomment if you want it to be low-active
