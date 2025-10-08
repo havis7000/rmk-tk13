@@ -4,14 +4,14 @@ name = "TK13"
 product_name = "TK13"
 vendor_id = 0x4c4b
 product_id = 0x4643
-manufacturer = "haobo"
+manufacturer = "havis"
 chip = "nrf52840"  # Direct chip specification
 
 
 [matrix]
 # Input and output pins are mandatory
-input_pins = ["P0_02", "P0_22", "P1_04", "P0_11"]
-output_pins = ["P0_20", "P1_00", "P0_24", "P1_06"]
+input_pins = ["P0_17", "P0_02", "P0_10", "P1_11"]
+output_pins = ["P0_29", "P1_15", "P1_13", "P0_09"]
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
 #row2col = true
 
@@ -32,19 +32,19 @@ matrix_map = """
 name = "base_layer" #optional name for the layer
 keys = """
 MO(1) W ESC _  
-A     S D F  
-Z     X C G 
-_     _ Y SPACE  
+A     S F   G  
+Z     X D   Y 
+_     _ C   SPACE  
 """
 
 # layer 1:
 [[layer]]
 name = "fn_layer" #optional name for the layer
 keys = """
-Q W ESC _  
-A S D F  
-Z X C G 
-_ _ Y SPACE
+_ User0 User1 _  
+_ _     _     Bootloader  
+Z X     D     G 
+_ _     C     _
 """
 
 [[input_device.encoder]]
