@@ -52,7 +52,7 @@ pin_a = "P0_29"
 pin_b = "P0_31"
 
 # Whether to use the MCU's internal pull-up resistor, default to false
-internal_pullup = ture
+internal_pullup = true
 
 # Phase is the working mode of the rotary encoders.
 # Available mode:
