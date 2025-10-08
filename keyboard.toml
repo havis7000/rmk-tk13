@@ -10,8 +10,8 @@ chip = "nrf52840"  # Direct chip specification
 
 [matrix]
 # Input and output pins are mandatory
-input_pins = ["P0_17", "P0_02", "P0_10", "P1_11"]
-output_pins = ["P0_29", "P1_15", "P1_13", "P0_09"]
+input_pins = ["P0_02", "P0_22", "P1_04", "P0_11"]
+output_pins = ["P0_20", "P1_00", "P0_24", "P1_06"]
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
 #row2col = true
 
@@ -48,8 +48,8 @@ _ _     C     _
 """
 
 [[input_device.encoder]]
-pin_a = "P0_22"
-pin_b = "P0_20"
+pin_a = "P0_29"
+pin_b = "P0_31"
 
 # Whether to use the MCU's internal pull-up resistor, default to false
 internal_pullup = true
