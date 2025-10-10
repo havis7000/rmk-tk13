@@ -93,4 +93,3 @@ battery_adc_pin = "vddh"
 [storage]
 # Storage feature is enabled by default
 # enabled = false
-clear_storage = false
