@@ -1,7 +1,7 @@
 # Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
 [keyboard]
-name = "TK013"
-product_name = "TK013"
+name = "TK13"
+product_name = "TK13"
 vendor_id = 0x4c4b
 product_id = 0x4643
 manufacturer = "havis"
@@ -10,8 +10,8 @@ chip = "nrf52840"  # Direct chip specification
 
 [matrix]
 # Input and output pins are mandatory
-input_pins = ["P0_02", "P0_22", "P1_04", "P0_11"]
-output_pins = ["P0_20", "P1_00", "P0_24", "P1_06"]
+input_pins = ["P0_31", "P0_22", "P1_04", "P0_11"]
+output_pins = ["P0_20", "P0_24", "P1_00", "P1_06"]
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
 #row2col = true
 
@@ -43,8 +43,8 @@ name = "fn_layer" #optional name for the layer
 keys = """
 _ User0 User1     _  
 _ _   Clear  Bootloader  
-Z X     D     G 
-_ _     C     _
+A B     C     D 
+_ _     _     _
 """
 
 [[input_device.encoder]]
