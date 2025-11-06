@@ -48,8 +48,8 @@ _ _     _     _
 """
 
 [[input_device.encoder]]
-pin_a = "P0_02"
-pin_b = "P0_29"
+pin_a = "P1_09"
+pin_b = "P0_05"
 
 # Whether to use the MCU's internal pull-up resistor, default to false
 internal_pullup = true
