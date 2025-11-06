@@ -64,7 +64,7 @@ phase = "default"
 # The resolution represents how many pulses the encoder generates per detent.
 # For examples, if your rotary encoder has 30 detents in total and generates 15 pulses per 360 degree rotation, then the resolution = 30/15 = 2.
 # Number of detents and number of pulses can be found in your encoder's datasheet
-resolution = 2
+resolution = 1
 
 # Whether the direction of the rotary encoder is reversed.
 reverse = false
