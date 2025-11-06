@@ -1,7 +1,7 @@
 # Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
 [keyboard]
-name = "TK13"
-product_name = "TK13"
+name = "TK130"
+product_name = "TK130"
 vendor_id = 0x4c4b
 product_id = 0x4643
 manufacturer = "havis"
